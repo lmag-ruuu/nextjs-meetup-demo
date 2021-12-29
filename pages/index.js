@@ -54,7 +54,7 @@ export async function getStaticProps() {
   return {
     props: {
       meetups: meetups,
-      revalidate: 10, //estos son segundos para re-generar la pagina
+      revalidate: 1, //estos son segundos para re-generar la pagina
     },
   };
 }
