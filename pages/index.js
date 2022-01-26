@@ -19,7 +19,7 @@ const HomePage = (props) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   //fetch datos o mirar archivos en el filesistem, retornar un objeto, siempre debo retornar un obj... es lo que haremos ahora xd
   const uri =
     "mongodb+srv://ruben:Gf0UD4JuZwp5Wtgb@cluster0.ejlc8.mongodb.net/meetups?retryWrites=true&w=majority";
@@ -54,8 +54,7 @@ export async function getStaticProps() {
   return {
     props: {
       meetups,
-    },
-    revalidate: 1, //estos son segundos para re-generar la pagina
+    }
   };
 }
 
